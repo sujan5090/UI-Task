@@ -1,0 +1,12 @@
+<mat-drawer-container fullscreen>
+    <mat-drawer mode="side" opened="true">
+            <input type="file"  id="myFile" />
+            <button  (click)="Upload()"> submit</button>
+    </mat-drawer>
+    <mat-drawer-content>
+        <h1>{{ title }}</h1>
+        <div  *ngIf="dataStatus">
+        <app-stacked-bar-chart  [data]="validData"></app-stacked-bar-chart>
+        </div>
+    </mat-drawer-content>
+</mat-drawer-container>
